@@ -1,0 +1,30 @@
+{
+	"name": "dwf-m6-mychat",
+	"version": "1.0.0",
+	"license": "MIT",
+	"scripts": {
+		"dev": "nodemon --watch \"./index.ts\" --ext \"ts\" --exec \"ts-node ./dev.ts\"",
+		"dev:front": "parcel serve ./src/index.html",
+		"build:front": "parcel build ./src/index.html",
+		"test": "ava",
+		"build:api": "tsc --resolveJsonModule index.ts",
+		"build": "yarn build:front && yarn build:api",
+		"start": "node index.js"
+	},
+	"dependencies": {
+		"cors": "^2.8.5",
+		"dotenv": "^16.0.0",
+		"express": "^4.17.3",
+		"firebase": "^9.6.11",
+		"firebase-admin": "^10.1.0",
+		"lodash": "^4.17.21",
+		"nanoid": "^3.3.3",
+		"nodemon": "^2.0.15",
+		"parcel": "^2.5.0",
+		"typescript": "^4.6.3"
+	},
+	"devDependencies": {
+		"@types/node": "^17.0.27",
+		"process": "^0.11.10"
+	}
+}
