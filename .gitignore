@@ -4,3 +4,5 @@ dist
 index.js
 db.js
 yarn-error.log
+.env
+key.json
