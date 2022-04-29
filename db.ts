@@ -1,10 +1,10 @@
 import * as admin from "firebase-admin";
 import "dotenv/config";
 // import * as serviceAccount from "./key.json";
-const projectId = process.env.PROJECT_ID.toString();
-const privateKeyId = process.env.PRIVATE_KEY_ID.toString();
+const projectId = process.env.PROJECT_ID;
+const privateKeyId = process.env.PRIVATE_KEY_ID;
 const privateKey = process.env.PRIVATE_KEY.toString();
-const clientEmail = process.env.CLIENT_EMAIL.toString();
+const clientEmail = process.env.CLIENT_EMAIL;
 const serviceAccount = {
 	type: "service_account",
 	project_id: projectId,
