@@ -11,7 +11,7 @@ const firebaseConfig = {
 };
 const app = initializeApp(firebaseConfig);
 const rtdb = getDatabase(app);
-let API_BASE_URL = "https://dwf-m6-mychat.herokuapp.com/";
+let API_BASE_URL = "https://dwf-m6-mychat.herokuapp.com";
 // const dev = process.env.NODE_ENV == "development";
 // if (dev) {
 // 	API_BASE_URL = "http://localhost:3000";
