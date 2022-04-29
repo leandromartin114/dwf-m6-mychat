@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getDatabase, ref, onValue } from "firebase/database";
 import map from "lodash/map";
+import "dotenv/config";
 const firebaseConfig = {
 	apiKey: "BrUjCvxf53Aue7vSOEzTg0nKxqkXYMTMwbE4RrB6",
 	databaseURL: "https://apx-dwf-m6-35aa5-default-rtdb.firebaseio.com",
@@ -10,8 +11,11 @@ const firebaseConfig = {
 };
 const app = initializeApp(firebaseConfig);
 const rtdb = getDatabase(app);
-const API_BASE_URL = "http://localhost:3000";
-
+let API_BASE_URL = "https://dwf-m6-mychat.herokuapp.com/";
+const dev = process.env.NODE_ENV == "development";
+if (dev) {
+	API_BASE_URL = "http://localhost:3000";
+}
 const state = {
 	data: {
 		userId: "",
